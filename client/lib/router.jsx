@@ -9,6 +9,9 @@ import Home from '../template/home';
 import Page from '../template/page';
 import More from '../template/more';
 
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
+
 FlowRouter.route('/',{
   action(){
     mount(MainLayout, {

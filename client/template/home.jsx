@@ -1,7 +1,6 @@
 import React from 'react';
-
-import AppBar from '../component/appBar';
-import RaisedButton from '../component/raisedButton';
+import TextField from 'material-ui/lib/text-field';
+import AutoComplete from 'material-ui/lib/auto-complete';
 
 const Home = React.createClass({
   mixins: [ReactMeteorData],
@@ -12,9 +11,16 @@ const Home = React.createClass({
   render() {
     return (
       <div>
-        <AppBar/>
-        <h1>Home</h1>
-        <div><a href="/page">Some page</a></div>
+        <div>
+          <h1>Home</h1>
+          <div><a href="/page">Some page</a></div>
+        </div>
+        <br/>
+        <div className="clearfix">
+          <TextField
+            hintText="The hint text can be as long as you want, it will wrap."
+            multiLine={true} />
+        </div>
       </div>
 
     );
